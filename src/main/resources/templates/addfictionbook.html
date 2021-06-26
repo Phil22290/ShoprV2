@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+      <div th:insert="fragments/frags :: navi"></div>
+</head>
+
+<body class="tablebg">
+
+<h2 class="padding-shopr aligncenter" style="color:white">Add Fiction Book</h2>
+<br>
+<br>
+<div class="container boxwidth tablebg">
+      <form th:action="@{/addfictionbookdb}" th:object="${newfictionbook}" method="post">
+            <!--  <input type="text" th:field="*{articleId}" placeholder="Article ID" class="form-control mb-4 col-4">-->
+            <input type="text" th:field="*{author}" placeholder="Author" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{title}" placeholder="Title" class="form-control mb-4 col-4">
+            <select class="form-control  mb-4 col-4" th:field="*{bookGenre}">
+                  <option th:each="bookGenre :${T(com.vdab.Shopr.domain.BookGenre).values()}"
+                          th:text="${bookGenre.getDisplay()}"
+                          th:value="${bookGenre}">
+                  </option>
+            </select>
+            <input type="text" th:field="*{description}" placeholder="Description" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{pages}" placeholder="Pages" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{supplierId}" placeholder="Supplier ID" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{isbn}" placeholder="ISBN" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{price}" placeholder="Price" class="form-control mb-4 col-4">
+
+
+            <!--SUBMIT BUTTON-->
+            <div class="col-md-3" style="text-align: center; width: 250px; margin: 0 auto; padding-top: 50px">
+                  <button id="submitbtn" type="submit" class="form-control btn btn-primary">Submit new product</button>
+            </div>
+      </form>
+</div>
+
+<div th:insert="fragments/frags :: scripts"></div>
+
+</body>
+
+<div th:replace="fragments/frags :: footer"></div>
+
+</html>

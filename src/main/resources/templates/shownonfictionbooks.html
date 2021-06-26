@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+      <div th:insert="fragments/frags :: navi"></div>
+</head>
+<body class="tablebg">
+<div class="container my-2 tablebg paddingtitle">
+      <h2 style="color:white">Non-Fiction Books</h2>
+
+      <!-- NON FICTION BOOKS -->
+      <table class="table table-purple">
+            <thead>
+            <tr class="textwhite">
+                  <th data-field="article_id">Author</th>
+                  <th data-field="title">Title</th>
+                  <th data-field="Subject">Subject</th>
+                  <th data-field="pages">Pages</th>
+                  <th data-field="price">Price</th>
+                  <th data-field="isbn">ISBN</th>
+                  <th data-field="supplier_id">Supplier ID</th>
+                  <th>Quick Actions</th>
+            </tr>
+            </thead>
+
+            <tbody class="textwhite">
+            <tr th:each="booknonfiction : ${shownonfictionbooks}">
+
+                  <td th:text="${booknonfiction.getAuthor()}"></td>
+                  <td th:text="${booknonfiction.getTitle()}"></td>
+                  <td th:text="${booknonfiction.getBookSubject.getDisplay()}"></td>
+                  <td th:text="${booknonfiction.getPages()}"></td>
+                  <td th:text="${booknonfiction.getPrice()}"></td>
+                  <td th:text="${booknonfiction.getIsbn()}"></td>
+                  <td th:text="${booknonfiction.getSupplierId()}"></td>
+
+                  <!--   TODO   <td> <a th:href="@{/editvinyl/{article_id}(article_id=${vinyl.getArticleId()})}" class="btn btn-secondary">Edit</a></td>-->
+                        <td> <a th:href="@{/deletenonfictionbook/{article_id}(article_id=${booknonfiction.getArticleId()})}" class="btn btn-secondary">Delete</a></td>
+            </tr>
+            </tbody>
+      </table>
+</div>
+
+<div th:insert="fragments/frags :: scripts"></div>
+
+</body>
+
+<div th:replace="fragments/frags :: footer"></div>
+
+</html>

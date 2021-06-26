@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+  <div th:insert="fragments/frags :: navi"></div>
+</head>
+<body class="tablebg centertext">
+
+<br>
+
+<form method="post" th:action="@{/editvinyl/{article_id}
+                                (article_id=${editvinyl.articleId})}" th:object="${editvinyl}">
+
+  <br>
+  <h3>Edit Vinyl</h3>
+
+  <br>
+  <p>Price:</p>
+  <div>
+    <label>
+      <input type="text" name="price" th:value="${editvinyl.getPrice()}">
+    </label>
+  </div>
+  <br>
+
+  <p>Supplier ID:</p>
+  <div>
+    <label>
+      <input type="text" name="supplierId" th:value="${editvinyl.getSupplierId()}">
+    </label>
+  </div>
+  <br>
+
+  <p>Title:</p>
+  <div>
+    <label>
+      <input type="text" name="title" th:value="${editvinyl.getTitle()}">
+    </label>
+  </div>
+  <br>
+
+  <p>Artist:</p>
+  <div>
+    <label>
+      <input type="text" name="artist" th:value="${editvinyl.getArtist()}">
+    </label>
+  </div>
+  <br>
+
+  <p>Genre:</p>
+  <div>
+    <label>
+      <input type="text" name="vinylGenre" th:value="${editvinyl.getVinylGenre()}">
+    </label>
+  </div>
+  <br>
+
+  <div class="col-md-3" style="width: 300px; margin: 0 auto;">
+    <button id="submitbtn" type="submit" class="form-control btn btn-primary">Submit</button>
+  </div>
+
+</form>
+
+
+
+<div th:insert="fragments/frags :: scripts"></div>
+</body>
+
+<div th:replace="fragments/frags :: footer"></div>
+
+</html>

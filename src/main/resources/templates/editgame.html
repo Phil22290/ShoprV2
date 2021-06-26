@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+      <div th:insert="fragments/frags :: navi"></div>
+</head>
+<body class="tablebg centertext">
+
+<br>
+
+<form method="post" th:action="@{/editgame/{article_id}
+                                (article_id=${editgame.articleId})}" th:object="${editgame}">
+
+      <br>
+      <h3>Edit Game</h3>
+
+      <br>
+      <p>Price:</p>
+      <div>
+            <label>
+                  <input type="text" name="price" th:value="${editgame.getPrice()}">
+            </label>
+      </div>
+      <br>
+
+      <p>Supplier ID:</p>
+      <div>
+            <label>
+                  <input type="text" name="supplierId" th:value="${editgame.getSupplierId()}">
+            </label>
+      </div>
+      <br>
+
+      <p>Title:</p>
+      <div>
+            <label>
+                  <input type="text" name="title" th:value="${editgame.getTitle()}">
+            </label>
+      </div>
+      <br>
+
+      <p>Publisher:</p>
+      <div>
+            <label>
+                  <input type="text" name="publisher" th:value="${editgame.getPublisher()}">
+            </label>
+      </div>
+      <br>
+
+      <p>Genre:</p>
+      <div>
+            <label>
+                  <input type="text" name="gameGenre" th:value="${editgame.getGameGenre()}">
+            </label>
+      </div>
+      <br>
+
+
+      <p>Min Age:</p>
+      <div>
+            <label>
+                  <input type="text" name="minAge" th:value="${editgame.getMinAge()}">
+            </label>
+      </div>
+      <br>
+
+      <div class="col-md-3" style="width: 300px; margin: 0 auto;">
+            <button id="submitbtn" type="submit" class="form-control btn btn-primary">Submit</button>
+      </div>
+
+</form>
+
+
+
+<div th:insert="fragments/frags :: scripts"></div>
+</body>
+
+<div th:replace="fragments/frags :: footer"></div>
+
+</html>

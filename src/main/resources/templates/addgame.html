@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+      <div th:insert="fragments/frags :: navi"></div>
+</head>
+
+<body class="tablebg">
+
+
+
+
+<h2 class="padding-shopr aligncenter" style="color:white">Add A Game</h2>
+<br>
+<br>
+<div class="container boxwidth tablebg">
+      <form th:action="@{/addgamedb}" th:object="${newgame}" method="post">
+            <input type="text" th:field="*{price}" placeholder="Product price" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{supplierId}" placeholder="Supplier ID" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{title}" placeholder="Title" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{publisher}" placeholder="Publisher" class="form-control mb-4 col-4">
+            <select class="form-control  mb-4 col-4" th:field="*{gameGenre}">
+                  <option th:each="gameGenre :${T(com.vdab.Shopr.domain.GameGenre).values()}"
+                          th:text="${gameGenre.getDisplay()}"
+                          th:value="${gameGenre}">
+                  </option>
+            </select>
+            <select class="form-control  mb-4 col-4" th:field="*{minAge}">
+                  <option th:each="gameAge :${T(com.vdab.Shopr.domain.GameAge).values()}"
+                          th:text="${gameAge.getDisplayAge()}"
+                          th:value="${gameAge}">
+                  </option>
+            </select>
+
+<!--SUBMITBUTTON-->
+            <div class="col-md-3" style="text-align: center; width: 250px; margin: 0 auto; padding-top: 50px">
+                  <button id="submitbtn" type="submit" class="form-control btn btn-primary">Submit new product</button>
+            </div>
+
+      </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div th:insert="fragments/frags :: scripts"></div>
+
+</body>
+<div th:replace="fragments/frags :: footer"></div>
+</html>
