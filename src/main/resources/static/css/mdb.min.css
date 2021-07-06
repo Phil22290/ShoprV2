@@ -1450,7 +1450,9 @@ progress {
     }
 
     .col-lg-4 {
-        width: 33.3333333333%
+        width: 33.3333333333%;
+        text-align: center !important;
+
     }
 
     .col-lg-5 {
@@ -2104,7 +2106,7 @@ progress {
     --mdb-table-hover-color: #212529;
     --mdb-table-hover-bg: rgba(0, 0, 0, 0.075);
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     color: #212529;
     vertical-align: top;
     border-color: #e0e0e0
@@ -2252,10 +2254,10 @@ progress {
 }
 
 .table-purple {
-    --mdb-table-bg: #9999ff;
+    --mdb-table-bg: #7b0cbc;
     --mdb-table-striped-bg: #6666ff;
     --mdb-table-striped-color: #fff;
-    --mdb-table-active-bg: #9999ff;
+    --mdb-table-active-bg: #7b0cbc;
     --mdb-table-active-color: #fff;
     --mdb-table-hover-bg: #6666ff;
     --mdb-table-hover-color: #fff;
@@ -3803,7 +3805,7 @@ textarea.form-control-lg {
     padding: .5rem 0;
     text-align: left;
     list-style: none;
-    background-color: #9999ff;
+    background-color: #7b0cbc;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: .5rem
@@ -6449,7 +6451,8 @@ textarea.form-control-lg {
 }
 
 .carousel {
-    position: relative
+    position: relative;
+    margin-bottom: 10rem;
 }
 
 .carousel.pointer-event {
@@ -6582,8 +6585,8 @@ textarea.form-control-lg {
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
+    width: 1rem;
+    height: 1rem;
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 100% 100%
@@ -7580,6 +7583,7 @@ textarea.form-control-lg {
 
 .w-100 {
     width: 100% !important
+    height: 50% !important
 }
 
 .w-auto {
@@ -8074,6 +8078,7 @@ textarea.form-control-lg {
 
 .mb-4 {
     margin-bottom: 1.5rem !important
+    padding: 40px !important;
 }
 
 .mb-5 {
@@ -8315,7 +8320,9 @@ textarea.form-control-lg {
 }
 
 .p-4 {
-    padding: 1.5rem !important
+    padding-top: 100px !important;
+
+
 }
 
 .p-5 {
@@ -16341,7 +16348,7 @@ i.flag-zimbabwe:before, i.flag-zw:before {
 }
 
 .btn-group-lg > .btn, .btn-lg {
-    padding: .75rem 1.6875rem .6875rem;
+    padding: 1rem 1.6875rem .6875rem;
     font-size: .875rem;
     line-height: 1.6
 }
@@ -18403,7 +18410,7 @@ i.flag.zimbabwe:before, i.flag.zw:before {
 }
 
 .tablebg{
-    background-color: #9999ff !important;
+    background-color: #7b0cbc !important;
     color: white !important;
 }
 
@@ -18422,3 +18429,4 @@ i.flag.zimbabwe:before, i.flag.zw:before {
 .boxwidth{
     width: 20% !important;
 }
+

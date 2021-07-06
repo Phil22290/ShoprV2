@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
+<head th:replace="fragments/frags :: head">
+  <div th:insert="fragments/frags :: navi"></div>
+</head>
+
+<body class="tablebg">
+
+<div th:insert="fragments/frags :: scripts"></div>
+
+<!--&lt;!&ndash;VINYL&ndash;&gt;-->
+<!--<div class="container my-2 tablebg paddingtitle">-->
+<!--  <h2 style="color:white">Vinyl</h2>-->
+
+
+<!--  &lt;!&ndash; VINYL &ndash;&gt;-->
+<!--  <table class="table table-purple">-->
+<!--    <thead>-->
+<!--    <tr class="textwhite">-->
+<!--      &lt;!&ndash;      <th data-field="article_id">Article ID</th>&ndash;&gt;-->
+<!--      <th data-field="price">Price</th>-->
+<!--      <th data-field="supplier_id">Supplier ID</th>-->
+<!--      <th data-field="title">Title</th>-->
+<!--      <th data-field="artist">Artist</th>-->
+<!--      <th data-field="vinyl_genre">Genre</th>-->
+<!--      <th>Quick Actions</th>-->
+
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody class="textwhite">-->
+<!--    <tr th:each="vinyl : ${showvinyl}">-->
+
+<!--      &lt;!&ndash;      <td th:text="${vinyl.getArticleId()}"></td>&ndash;&gt;-->
+<!--      <td th:text="${vinyl.getPrice()}"></td>-->
+<!--      <td th:text="${vinyl.getSupplierId()}"></td>-->
+<!--      <td th:text="${vinyl.getTitle()}"></td>-->
+<!--      <td th:text="${vinyl.getArtist()}"></td>-->
+<!--      <td th:text="${vinyl.getVinylGenre.getDisplay()}"></td>-->
+
+<!--      &lt;!&ndash;  TODO    <td> <a th:href="@{/editvinyl/{article_id}(article_id=${vinyl.getArticleId()})}" class="btn btn-secondary">Edit</a></td>&ndash;&gt;-->
+<!--      <td> <a th:href="@{/deletevinyl/{article_id}(article_id=${vinyl.getArticleId()})}" class="btn btn-secondary">Delete</a></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+
+<!--</div>-->
+
+<!--<div class="container my-2 tablebg paddingtitle">-->
+<!--  <h2 style="color:white">Games</h2>-->
+
+<!--  &lt;!&ndash;  <a th:href="@{/showAllBooks}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>&ndash;&gt;-->
+
+<!--  &lt;!&ndash; games &ndash;&gt;-->
+<!--  <table class="table table-purple">-->
+<!--    <thead>-->
+<!--    <tr class="textwhite">-->
+<!--      &lt;!&ndash;                  <th data-field="article_id">Article ID</th>&ndash;&gt;-->
+<!--      <th data-field="title">Title</th>-->
+<!--      <th data-field="publisher">Publisher</th>-->
+<!--      <th data-field="game_genre">Genre</th>-->
+<!--      <th data-field="min_age">Min Age</th>-->
+<!--      <th data-field="price">Price</th>-->
+<!--      <th data-field="supplier_id">Supplier ID</th>-->
+
+<!--      <th data-field="quick">Quick Actions</th>-->
+
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody class="textwhite">-->
+<!--    <tr th:each="game : ${showgames}">-->
+
+<!--      <td th:text="${game.getTitle()}"></td>-->
+<!--      <td th:text="${game.getPublisher()}"></td>-->
+<!--      <td th:text="${game.getGameGenre.getDisplay()}"></td>-->
+<!--      <td th:text="${game.getMinAge.getDisplayAge()}"></td>-->
+<!--      <td th:text="${game.getPrice()}"></td>-->
+<!--      <td th:text="${game.getSupplierId()}"></td>-->
+
+<!--      &lt;!&ndash;           TODO       <td> <a th:href="@{/editgame/{article_id}(article_id=${game.getArticleId()})}" class="btn btn-secondary">Edit</a></td>&ndash;&gt;-->
+<!--      <td> <a th:href="@{/deletegame/{article_id}(article_id=${game.getArticleId()})}" class="btn btn-secondary">Delete</a></td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+
+<!--</div>-->
+
+
+</body>
+<div th:replace="fragments/frags :: footer"></div>
+</html>

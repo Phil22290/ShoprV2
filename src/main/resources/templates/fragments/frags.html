@@ -18,13 +18,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <!--BROWSER ICON  -->
   <link rel="icon" href="../../img/Sicon.png" />
-
+<!--  STORE JS en CSS-->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <div th:fragment="navi">
   <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#9999ff;">
+    <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#7b0cbc;">
     <!-- Container wrapper -->
     <div class="container-fluid">
 
@@ -38,7 +39,7 @@
 
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse tablebg" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav mb-2 mb-lg-0">
 
           <!-- Link -->
 <!--          <li class="nav-item">-->
@@ -48,7 +49,7 @@
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              Shop for...
+              Buy
             </a>
             <!-- Dropdown menu -->
             <ul class="dropdown-menu tablebg" aria-labelledby="navbarDropdown">
@@ -80,7 +81,7 @@
           <!-- Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-              Add New Products
+              Add
             </a>
             <!-- Dropdown menu -->
             <ul class="dropdown-menu tablebg" aria-labelledby="navbarDropdown">
@@ -126,7 +127,119 @@
   </nav>
   <!-- Navbar -->
 
+<!--  logo border-->
+  <div class="aligncenter"><img width="70%" src="../../img/Shoprhead.png"> </div>
+
+
 </div>
+<div th:fragment="naviindex">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark " style="background-color:#7b0cbc;">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
+      <!-- SHOPR TITLE -->
+      <a class="navbar-brand padding-shopr" href="/">SHOPR</a>
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse tablebg" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+
+          <!-- Link -->
+          <!--          <li class="nav-item">-->
+          <!--            <a class="nav-link" href="#">Link</a>-->
+          <!--          </li>-->
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              Buy
+            </a>
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu tablebg" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="/showvinyl">Vinyl</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/showgames">Games</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/showfictionbooks">Fiction Books</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/shownonfictionbooks">Non-fiction Books</a>
+              </li>
+
+
+
+            </ul>
+          </li>
+
+        </ul>
+
+
+
+        <!-- SECOND DROPDOWN LIST -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+              Add
+            </a>
+            <!-- Dropdown menu -->
+            <ul class="dropdown-menu tablebg" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="/addvinyl">Add Vinyl</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/addgame">Add Game</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/addfictionbook">Add Fiction Book</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/addnonfictionbook">Add Non-Fiction Book</a>
+              </li>
+              <!--              <li>-->
+              <!--                <hr class="dropdown-divider" />-->
+              <!--              </li>-->
+
+            </ul>
+          </li>
+
+        </ul>
+
+        <!-- Icons -->
+        <ul class="navbar-nav d-flex flex-row me-1">
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item me-3 me-lg-0">
+            <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <form class="w-auto">
+          <input type="search" class="form-control" placeholder="What are you looking for?" aria-label="Search">
+        </form>
+
+      </div>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+</div>
+
 
 <div th:fragment="scripts">
   <!-- MDB -->
@@ -137,8 +250,156 @@
 
 </body>
 
-<footer>
+<footer th:fragment="footer">
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+        ></a>
 
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+        ></a>
+
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-google"></i
+        ></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+        ></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-linkedin-in"></i
+        ></a>
+
+        <!-- Github -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+
+
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">BUY PRODUCTS</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="/showvinyl" class="text-white">Vinyl</a>
+              </li>
+              <li>
+                <a href="/showgames" class="text-white">Games</a>
+              </li>
+              <li>
+                <a href="/showfictionbooks" class="text-white">Fiction Books</a>
+              </li>
+              <li>
+                <a href="/shownonfictionbooks" class="text-white">Non-Fiction Books</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">ADD PRODUCTS</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="/addvinyl" class="text-white">Vinyl</a>
+              </li>
+              <li>
+                <a href="/addgame" class="text-white">Games</a>
+              </li>
+              <li>
+                <a href="/addfictionbook" class="text-white">Fiction Books</a>
+              </li>
+              <li>
+                <a href="/addnonfictionbook" class="text-white">Non-Fiction Books</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">SUPPORT</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Shipping</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Payments</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Returns</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Complaints</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">SHOPR</h5>
+
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Careers</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Environment</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Our Team</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://www.linkedin.com/in/philippe-hermans90">Philippe Hermans</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 
 </html>

@@ -1,16 +1,130 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- import thymeleaf -->
 <head th:replace="fragments/frags :: head">
-<div th:insert="fragments/frags :: navi"></div>
-<div class="aligncenter"><img width="100%" src="../../img/Shoprhead.png"> </div>
+<div th:insert="fragments/frags :: naviindex"></div>
 
+<!--      <div class="aligncenter"><img width="70%" src="../../img/Shoprheadindex.png"> </div>-->
+
+      <style>
+          .bd-placeholder-img {
+              font-size: 1.125rem;
+              text-anchor: middle;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              user-select: none;
+          }
+
+          @media (min-width: 768px) {
+              .bd-placeholder-img-lg {
+                  font-size: 3.5rem;
+              }
+          }
+      </style>
+
+
+      <!-- Custom styles for this template -->
+      <link href="carousel.css" rel="stylesheet">
 
 </head>
 
-<body>
-<div>
-      <div class="dt"></div>
+<body class="tablebg">
+
+
+<!--CAROUSEL-->
+
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+            <div class="carousel-item active">
+                  <img src="../../img/vinyl.jpg" class="d-block w-100" alt="..." >
+<!--                  <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>-->
+
+                  <div class="container">
+                        <div class="carousel-caption text-start">
+                              <h1 style="font-size: 5rem;">Shopr.</h1>
+                              <h1>Your one-stop shop for vinyl</h1>
+
+
+
+                              <p><a class="btn btn-lg btn-primary" href="/showvinyl">Get yours today!</a></p>
+                        </div>
+                  </div>
+            </div>
+            <div class="carousel-item">
+                  <img src="../../img/games.png" class="d-block w-100" alt="..." >
+
+                  <div class="container">
+                        <div class="carousel-caption">
+                              <h1 style="font-size: 5rem;">Games</h1>
+                              <h1>For all ages.</h1>
+
+                              <p><a class="btn btn-lg btn-primary" href="/showgames">Let's play!</a></p>
+                        </div>
+                  </div>
+            </div>
+            <div class="carousel-item">
+                  <img src="../../img/books.png" class="d-block w-100" alt="..." >
+
+                  <div class="container">
+                        <div class="carousel-caption text-end">
+                              <h1 style="font-size: 5rem;">And yes, <br>  we even have books.</h1>
+                              <h1>Let's get nerdy.</h1>
+                              <p><a class="btn btn-lg btn-primary" href="showfictionbooks">Browse Our Books!</a></p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+      </button>
 </div>
+
+
+      <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                  <div class="col-lg-4">
+                        <img src="../../img/stock.png" alt=".." width="40%">
+
+                        <h2>Huge selection</h2>
+                        <p>We offer a enormous selection of products, even Amazon can't touch us.</p>
+                        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4 margin-bottom">
+<!--                        <svg class="bd-placeholder-img rounded-circle" width="140" height="140"-->
+<!--                             xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"-->
+<!--                             preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>-->
+<!--                              <rect width="100%" height="100%" fill="#777"/>-->
+<!--                              <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>-->
+<!--                        </svg>-->
+                        <img src="../../img/drone.png" alt=".." width="40%">
+
+                        <h2>Shipping</h2>
+                        <p>We aim to ship your order by drone, within 30 minutes. Ain't that fast?</p>
+                        <p><a class="btn btn-secondary" href="#">Shipping details &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-lg-4">
+                        <img src="../../img/support.png" alt=".." width="40%">
+
+                        <h2>Customer Service</h2>
+                        <p>Our customer service will make you smile. That's a promise.</p>
+                        <p><a class="btn btn-secondary" href="#">Chat with your new friends &raquo;</a></p>
+                  </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+      </div>
+
+<img src="../../img/bg.png" width="100%" />
+
 <div th:insert="fragments/frags :: scripts"></div>
 
 </body>
